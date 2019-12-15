@@ -9,4 +9,4 @@ Download the Project. Add all files except "Main.cpp" to your project. Add "#inc
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+This project is licensed under the GNU GENERAL PUBLIC LICENSE Version 3 - see the [LICENSE](LICENSE) file for details
