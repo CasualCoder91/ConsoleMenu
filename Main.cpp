@@ -1,7 +1,7 @@
 #include <iostream>
 #include <Windows.h>
 
-#include "Menu.h"
+#include "ConsoleMenu/Menu.h"
 
 int main() {
 
@@ -12,6 +12,7 @@ int main() {
 	menu.AddOption("This is an Option Text");
 	menu.AddOption("This is another Option Text");
 	menu.AddOption(0, 99, false);
+	menu.AddOption("blablabla \n blub!");
 	menu.Print();
 	while (true) {
 		if (GetAsyncKeyState(VK_NUMPAD1))

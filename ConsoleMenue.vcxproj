@@ -23,6 +23,7 @@
     <ProjectGuid>{29DDD67D-F5A9-4CCB-B502-1FF5968BD244}</ProjectGuid>
     <RootNamespace>ConsoleMenue</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>ConsoleMenu</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -123,17 +124,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ConsoleMenu\Button.cpp" />
+    <ClCompile Include="ConsoleMenu\Menu.cpp" />
+    <ClCompile Include="ConsoleMenu\ProgressBar.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Menu.cpp" />
-    <ClCompile Include="Button.cpp" />
-    <ClCompile Include="ProgressBar.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Color.h" />
-    <ClInclude Include="Enums.h" />
-    <ClInclude Include="Menu.h" />
-    <ClInclude Include="Button.h" />
-    <ClInclude Include="ProgressBar.h" />
+    <ClInclude Include="ConsoleMenu\Button.h" />
+    <ClInclude Include="ConsoleMenu\Color.h" />
+    <ClInclude Include="ConsoleMenu\Menu.h" />
+    <ClInclude Include="ConsoleMenu\ProgressBar.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -9,40 +9,36 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="ConsoleMenu">
+      <UniqueIdentifier>{c1156b7e-9307-4887-a5d2-068037f5d3ca}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Menu.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ProgressBar.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Button.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="ConsoleMenu\Button.cpp">
+      <Filter>ConsoleMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleMenu\Menu.cpp">
+      <Filter>ConsoleMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleMenu\ProgressBar.cpp">
+      <Filter>ConsoleMenu</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Menu.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="ConsoleMenu\Button.h">
+      <Filter>ConsoleMenu</Filter>
     </ClInclude>
-    <ClInclude Include="ProgressBar.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="ConsoleMenu\Color.h">
+      <Filter>ConsoleMenu</Filter>
     </ClInclude>
-    <ClInclude Include="Color.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="ConsoleMenu\Menu.h">
+      <Filter>ConsoleMenu</Filter>
     </ClInclude>
-    <ClInclude Include="Enums.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Button.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="ConsoleMenu\ProgressBar.h">
+      <Filter>ConsoleMenu</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

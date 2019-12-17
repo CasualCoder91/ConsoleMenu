@@ -3,7 +3,6 @@
 #include<vector>
 #include "Button.h"
 #include "ProgressBar.h"
-#include "Enums.h"
 
 class Menu
 {
