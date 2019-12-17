@@ -5,7 +5,7 @@ Add a Menu in a Console Application. Currently two types of elements are support
 
 ## Getting Started
 
-Download the Project. Add all files except "Main.cpp" to your project. Add "#include "Menu.h"" at apropriate location.
+Download the Project. Add all files from the folder ConsoleMenu to your project. Add "#include "Menu.h"" at apropriate location.
 
 ## License
 
