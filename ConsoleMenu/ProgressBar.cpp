@@ -26,7 +26,7 @@ void ProgressBar::Print()
             else if (i == pos) std::cout << ">";
             else std::cout << " ";
         }
-        std::cout << "] " << int(progress * 100.0) << " %\r" << ansi::reset;
+        std::cout << "] " << int(progress * 100.0) << " %\r" << ansi::reset << std::endl;
     }
 }
 

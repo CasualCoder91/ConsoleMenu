@@ -2,23 +2,28 @@
 #include <iostream>
 #include "Menu.h"
 
-Button::Button(std::string text)
+Button::Button(std::string text, int status)
 {
 	this->text = text;
-	this->status = 0; // = OFF
+	this->status = status;
 }
 
 void Button::Print()
 {
-    std::cout << this->text << " [";
-    if (status == 0)
-        std::cout << ansi::foreground_red << "OFF";
-    else if (status == 1) {
-        std::cout << ansi::foreground_yellow << "LOADING";
+    std::cout << this->text;
+    if (status != -1) {
+
+        std::cout << " [";
+        if (status == 0)
+            std::cout << ansi::foreground_red << "OFF";
+        else if (status == 1) {
+            std::cout << ansi::foreground_yellow << "LOADING";
+        }
+        else if (status == 2)
+            std::cout << ansi::foreground_green << "ON";
+        std::cout << ansi::reset << "]";
     }
-    else if (status == 2)
-        std::cout << ansi::foreground_green << "ON";
-    std::cout << ansi::reset << "]\n";
+    std::cout << std::endl;
 }
 
 void Button::UpdateStatus()
@@ -35,4 +40,10 @@ void Button::UpdateStatus()
 void Button::UpdateStatus(int status)
 {
     this->status = status;
+}
+
+void Button::UpdateStatus(bool status)
+{
+    int iStatus = status ? 2 : 0;
+    this->status = iStatus;
 }

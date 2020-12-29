@@ -14,9 +14,9 @@ Menu::Menu(std::string header, std::string footer)
 	this->ShowCursor(false);
 }
 
-void Menu::AddOption(std::string text)
+void Menu::AddOption(std::string text, int status)
 {
-	Button option = Button(text);
+	Button option = Button(text, status);
 	this->buttons.push_back(option);
 	this->Options.push_back(0);
 }
@@ -67,7 +67,7 @@ void Menu::UpdateOption(bool on)
 	this->Print();
 }
 
-void Menu::UpdateButton(int index)
+void Menu::UpdateOption(int index)
 {
 	try {
 		buttons[index].UpdateStatus();
@@ -75,6 +75,25 @@ void Menu::UpdateButton(int index)
 	catch (const std::exception & e) { std::cout << e.what(); };
 	this->Print();
 }
+
+void Menu::UpdateOption(int index, int status)
+{
+	try {
+		buttons[index].UpdateStatus(status);
+	}
+	catch (const std::exception& e) { std::cout << e.what(); };
+	this->Print();
+}
+
+void Menu::UpdateOption(int index, bool status)
+{
+	try {
+		buttons[index].UpdateStatus(status);
+	}
+	catch (const std::exception& e) { std::cout << e.what(); };
+	this->Print();
+}
+
 
 void Menu::UpdateProgressBar(int index, float currentValue)
 {
@@ -82,17 +101,6 @@ void Menu::UpdateProgressBar(int index, float currentValue)
 		this->progressBars[index].Update(currentValue);
 	}
 	catch (const std::exception & e) { std::cout << e.what(); };
-	this->Print();
-}
-
-void Menu::UpdateOption(int index, float currentValue)
-{
-	if (currentValue == -1) {
-		buttons[index].UpdateStatus();
-	}
-	else{
-		progressBars[index].Update(currentValue);
-	}
 	this->Print();
 }
 
