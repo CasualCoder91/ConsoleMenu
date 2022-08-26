@@ -32,7 +32,11 @@ void Menu::Print()
 {
 	int button_counter = 0;
 	int progressbar_counter = 0;
+	#ifdef _WIN32
 	system("CLS");
+	#else
+	system("clear");
+	#endif
     std::cout << this->text << "\n\n";
 	for (int i : Options) {
 		if (i == 0) {
